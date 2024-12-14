@@ -1,0 +1,7 @@
+.footerImage {
+    background-image: url('footerBg.jpg'); 
+    background-repeat: no-repeat;
+    /* height: 38rem;  */
+    background-size: contain;
+    background-position-y: bottom;
+  }
