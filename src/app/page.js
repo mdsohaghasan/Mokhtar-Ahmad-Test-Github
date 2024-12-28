@@ -8,6 +8,7 @@ import Events from "./home/Events/Events";
 import Blogs from "./home/Blog/Blogs";
 import { SessionProvider } from "next-auth/react"
 import Lecture from "./home/Lecture/Lecture";
+import Live from "./home/Live/Live";
 
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     <div>   
       <Header />
+      <Live></Live> 
       <Podcast></Podcast>
       <Activities></Activities>
       <Lecture></Lecture>
