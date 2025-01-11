@@ -73,12 +73,7 @@ useEffect(() => {
                 sources: [{ src: "https://www.youtube.com/watch?v=mvh4xALnm8U", provider: "youtube" }],
               }}
             />
-            {/* <Plyr
-              source={{
-                type: "video",
-                sources: [{ src: "https://youtu.be/RiKF0e8wtSQ?si=OrSPsHwmRdwLlWQd", provider: "youtube" }],
-              }}
-            /> */}
+           
           </div>
           </div>
 
