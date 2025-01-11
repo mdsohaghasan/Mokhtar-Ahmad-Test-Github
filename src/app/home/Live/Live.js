@@ -5,6 +5,9 @@ const Plyr = dynamic(() => import("plyr-react"), { ssr: false });
 import "plyr-react/plyr.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "./Style.css";
+
+
 
 const Live = () => {
 
@@ -40,13 +43,17 @@ useEffect(() => {
 
             <div className="  lg:text-left" data-aos="fade-up" data-aos-duration="500">
               <h1 className="text-4xl py-3 text-amber-400">Our Live Session</h1>
+              <span class="circle"></span>
+              
             </div>
 
-            <div className="my-3" data-aos="fade-up" data-aos-duration="800">
+            <div className="" data-aos="fade-up" data-aos-duration="800">
             
-              <span className="border border-white rounded-3xl py-2 px-3  text-center mr-4">
-                LIve Icon .
+              <span className="border border-white rounded-3xl py-2 px-3  text-center ">
+                Live Streaming
               </span>
+              
+              
             </div>
             
             <div className="py-3" data-aos="fade-up" data-aos-duration="500">
@@ -63,9 +70,15 @@ useEffect(() => {
             <Plyr
               source={{
                 type: "video",
-                sources: [{ src: "https://youtu.be/RiKF0e8wtSQ?si=OrSPsHwmRdwLlWQd", provider: "youtube" }],
+                sources: [{ src: "https://www.youtube.com/watch?v=mvh4xALnm8U", provider: "youtube" }],
               }}
             />
+            {/* <Plyr
+              source={{
+                type: "video",
+                sources: [{ src: "https://youtu.be/RiKF0e8wtSQ?si=OrSPsHwmRdwLlWQd", provider: "youtube" }],
+              }}
+            /> */}
           </div>
           </div>
 
