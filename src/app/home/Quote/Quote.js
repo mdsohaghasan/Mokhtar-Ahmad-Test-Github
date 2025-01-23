@@ -1,6 +1,6 @@
 "use client";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import React, { useEffect } from "react";
 import mokhter from "./mokhter.png";
 import quote from "./quote.png";
 import AOS from "aos";
@@ -38,6 +38,27 @@ import "swiper/css";
 
 const Quote = () => {
 
+
+// const [Quotes, setQuotes] = useState([]);
+
+//   useEffect(() => {
+//     // const url = `https://mokhter-ahmad-backend-portfolio.vercel.app/quotes/all`;
+//     const url = `http://localhost:5000/quotes/All`;
+//     fetch(url, {
+//       // headers: {
+//       //   authorization: `Bearer ${token}`,
+//       // },
+//     })
+//       .then((res) => res.json())
+//       .then((data) => setQuotes(data))
+//       .catch((error) => {
+//         console.error("Error fetching program data:", error);
+//       });
+//   }, []);
+
+//   console.log(Quotes);
+
+
   useEffect(() => {
     AOS.init();
     AOS.refresh();
@@ -53,7 +74,7 @@ const Quote = () => {
         </div>
         <div className="st-height-b25 st-height-lg-b25"></div>
       </div>
-      {/* end titiel */}
+      {/* end title */}
 
       <div className="container px-5 lg:px-0">
         <div className="lg:flex  lg:gap-3 ">
@@ -109,7 +130,7 @@ const Quote = () => {
           </div>
 
           <div className="lg:w-2/6  py-4" data-aos="fade-left" data-aos-duration="800">
-            <Image src={mokhter} alt="quote" />
+            <Image src={mokhter} alt="quote"/>
           </div>
         </div>
       </div>

@@ -47,6 +47,13 @@ const Navbar = () => {
                       <li className="">
                         <Link
                           className="st-smooth-move rounded-t bg-gray-200 hover:bg-[#FEC544] py-2 px-4 block"
+                          href="/live" onClick={() => setMobileToggle(false)} >
+                          LIVE
+                        </Link>
+                      </li>
+                      <li className="">
+                        <Link
+                          className="st-smooth-move rounded-t bg-gray-200 hover:bg-[#FEC544] py-2 px-4 block"
                           href="/lecture" onClick={() => setMobileToggle(false)} >
                           LECTURES
                         </Link>
@@ -73,11 +80,25 @@ const Navbar = () => {
                       CONSULTANCY
                     </Link>
                   </li>
-                  <li>
-                    <Link href="/blog" className="st-smooth-move" onClick={() => setMobileToggle(false)}>
-                      Blog
-                    </Link>
-                  </li>
+                {/* Submenu  */}
+                <span className="dropdown relative st-smooth-move me-5">
+                    <li className="rounded inline-flex items-center me-1">
+                      <Link href="/blog" className="st-smooth-move" onClick={() => setMobileToggle(false)}>
+                       Blog
+                      </Link>
+                    </li>
+                    <i className="bi bi-chevron-down"></i>
+                    <ul className="dropdown-menu absolute hidden text-gray-700 pt-1">
+                      <li className="">
+                        <Link
+                          className="st-smooth-move rounded-t bg-gray-200 hover:bg-[#FEC544] py-2 px-4 block"
+                          href="/quotes" onClick={() => setMobileToggle(false)} >
+                          QUOTES
+                        </Link>
+                      </li>
+                    </ul>
+                  </span>
+                  {/* Submenu  */}
                 </ul>
                 <div className={`st-munu-toggle ${mobileToggle ? "st-toggle-active" : ""} `}  onClick={handleToggleMenu}>
                   <span></span>

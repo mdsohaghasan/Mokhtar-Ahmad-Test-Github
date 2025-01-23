@@ -1,11 +1,11 @@
 "use client";
+import "./Style.css";
 import React, { useEffect} from "react";
 import dynamic from "next/dynamic";
 const Plyr = dynamic(() => import("plyr-react"), { ssr: false });
 import "plyr-react/plyr.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "./Style.css";
 
 
 
@@ -19,13 +19,15 @@ useEffect(() => {
  
   
 
+
+
   return (
     <section>
       <div className="st-height-b100 st-height-lg-b80"></div>
       <div className="container">
         <div className="st-section-heading st-style1">
           <h4 className="st-section-heading-title">Live</h4>
-          <h2 className="st-section-heading-subtitle">Live Session</h2>
+          <h2 className="st-section-heading-subtitle">Streaming </h2>
         </div>
         <div className="st-height-b25 st-height-lg-b25"></div>
       </div>
@@ -36,22 +38,23 @@ useEffect(() => {
 
       <div className="container px-8 ">
 
-        <div className="lg:flex lg:items-center md:flex md:items-center	">
+        <div className="lg:flex lg:items-center md:flex md:items-center ">
 
           {/* First Collum  */}
           <div className="md:w-1/2 lg:w-1/2 gap-3">
 
             <div className="  lg:text-left" data-aos="fade-up" data-aos-duration="500">
               <h1 className="text-4xl py-3 text-amber-400">Our Live Session</h1>
-              <span class="circle"></span>
+              <span className="circle"></span>
               
             </div>
 
             <div className="" data-aos="fade-up" data-aos-duration="800">
             
-              <span className="border border-white rounded-3xl py-2 px-3  text-center ">
+              <span className="border border-white rounded-3xl py-2 px-3 text-center text-sm	">
                 Live Streaming
               </span>
+              
               
               
             </div>
@@ -64,33 +67,23 @@ useEffect(() => {
           </div>
 
 
+
             {/* seconds Collum  */}
-          <div className="md:w-1/2 lg:w-1/2 gap-3 ms-5">
+          <div className="md:w-1/2 lg:w-1/2 m-5">
              <div >
-            <Plyr
-              source={{
-                type: "video",
-                sources: [{ src: "https://www.youtube.com/watch?v=mvh4xALnm8U", provider: "youtube" }],
-              }}
-            />
-           
-          </div>
+                <Plyr
+                  source={{
+                    type: "video",
+                    sources: [{ src: "https://www.youtube.com/watch?v=3ymlpZAMKsg", provider: "youtube" }],
+                  }}
+                />
+            </div>
           </div>
 
 
 
         </div>
       </div>
-
-
-
-
-          
-            
-         
-
-         
-
         
       </div>
       <div className="st-height-b100 st-height-lg-b80"></div>

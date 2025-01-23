@@ -21,9 +21,11 @@
       margin-left: -75%;
       margin-top: -75%;
       border-radius: 45px;
-      background-color: #FBBF24;
+      background-color: #fc3939;
       animation: pulse 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
     }
+
+    /* #FBBF24 */
   
     &:after {
       content: "";
@@ -33,14 +35,14 @@
       display: block;
       width: 100%;
       height: 100%;
-      background-color: #FBBF24;
+      background-color: #ff0000;
       border-radius: 50px;
       animation: circle 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
     }
   }
   
   span.circle {
-    margin-left: 60px;
+    margin-left: 70px;
     margin-top: 3px;
 }
 

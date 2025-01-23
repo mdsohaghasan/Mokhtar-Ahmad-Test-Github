@@ -20,8 +20,8 @@ const Page = () => {
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 justify-center md:px-16 lg:px-24">
+
         <div className="bg-[#0a1e3b] p-3  my-2 rounded-lg">
-          
           <h4 className="text-[#fec544] text-center text-4xl py-4">Program</h4>
           <Link href="/admin/program" target="_blank">
             <p className="bg-[#fec544] py-2 px-1 rounded-lg text-gray-900 text-center text-xl font-medium">
@@ -34,22 +34,22 @@ const Page = () => {
             </p>
           </Link>
         </div>
+
         <div className="bg-[#0a1e3b] p-3 my-2 rounded-lg">
-         
-          <h4 className="text-[#fec544] text-center text-4xl py-4">Blog</h4>
-          <Link href="admin/blogpost/bloglist" target="_blank">
-          <p className="bg-[#fec544] py-2 px-1 rounded-lg text-gray-900 text-center text-xl font-medium">
-              Blog List
+          <h4 className="text-[#fec544] text-center text-4xl py-4">Live</h4>
+          <Link href="/admin/live/livelist" target="_blank">
+            <p className="bg-[#fec544] py-2 px-1 rounded-lg text-gray-900 text-center text-xl font-medium">
+              Live List
             </p>
           </Link>
-          <Link href="/admin/blogpost/addpost" target="_blank">
+          <Link href="/admin/live/addlive" target="_blank">
             <p className="bg-[#fec544] py-2 px-1 rounded-lg text-gray-900 text-center text-xl font-medium">
-              Add Blog
+               Add Live
             </p>
           </Link>
         </div>
+
         <div className="bg-[#0a1e3b] p-3 my-2 rounded-lg">
-          
           <h4 className="text-[#fec544] text-center text-4xl py-4">Lecture</h4>
           <Link href="/admin/lecture/lecturelist" target="_blank">
             <p className="bg-[#fec544] py-2 px-1 rounded-lg text-gray-900 text-center text-xl font-medium">
@@ -62,8 +62,22 @@ const Page = () => {
             </p>
           </Link>
         </div>
+
         <div className="bg-[#0a1e3b] p-3 my-2 rounded-lg">
-          
+         <h4 className="text-[#fec544] text-center text-4xl py-4">Blog</h4>
+         <Link href="admin/blogpost/bloglist" target="_blank">
+         <p className="bg-[#fec544] py-2 px-1 rounded-lg text-gray-900 text-center text-xl font-medium">
+             Blog List
+           </p>
+         </Link>
+         <Link href="/admin/blogpost/addpost" target="_blank">
+           <p className="bg-[#fec544] py-2 px-1 rounded-lg text-gray-900 text-center text-xl font-medium">
+             Add Blog
+           </p>
+         </Link>
+       </div>
+
+        <div className="bg-[#0a1e3b] p-3 my-2 rounded-lg">
           <h4 className="text-[#fec544] text-center text-4xl py-4">Event</h4>
           <Link href="/admin/event/eventlist" target="_blank">
             <p className="bg-[#fec544] py-2 px-1 rounded-lg text-gray-900 text-center text-xl font-medium">
@@ -76,8 +90,8 @@ const Page = () => {
             </p>
           </Link>
         </div>
+
         <div className="bg-[#0a1e3b] p-3  my-2 rounded-lg">
-          
           <h4 className="text-[#fec544] text-center text-4xl py-4">Consultancy</h4>
           <Link href="/admin/consultancy/consultancylist" target="_blank">
             <p className="bg-[#fec544] py-2 px-1 rounded-lg text-gray-900 text-center text-xl font-medium">
@@ -90,8 +104,8 @@ const Page = () => {
             </p>
           </Link>
         </div>
+
         <div className="bg-[#0a1e3b] p-3 my-2 rounded-lg">
-         
           <h4 className="text-[#fec544] text-center text-4xl py-4">Contact</h4>
           <Link href="/admin/contacts/contactlist" target="_blank">
             <p className="bg-[#fec544] py-2 px-1 rounded-lg text-gray-900 text-center text-xl font-medium">
@@ -104,8 +118,8 @@ const Page = () => {
             </p>
           </Link>
         </div>
+
         <div className="bg-[#0a1e3b] p-3  my-2 rounded-lg">
-          
           <h4 className="text-[#fec544] text-center text-4xl py-4">Podcast</h4>
           <Link href="/admin/podcast/podcastlist" target="_blank">
             <p className="bg-[#fec544] py-2 px-1 rounded-lg text-gray-900 text-center text-xl font-medium">
@@ -118,8 +132,8 @@ const Page = () => {
             </p>
           </Link>
         </div>
+
         <div className="bg-[#0a1e3b] p-3 my-2 rounded-lg">
-          
           <h4 className="text-[#fec544] text-center text-4xl py-4">Gallery</h4>
           <Link href="/admin/gallery/gallerylist" target="_blank">
             <p className="bg-[#fec544] py-2 px-1 rounded-lg text-gray-900 text-center text-xl font-medium">
@@ -132,8 +146,8 @@ const Page = () => {
             </p>
           </Link>
         </div>
+
         <div className="bg-[#0a1e3b] p-3 my-2 rounded-lg">
-          
           <h4 className="text-[#fec544] text-center text-4xl py-4">Book</h4>
           <Link href="/admin/book/booklist" target="_blank">
             <p className="bg-[#fec544] py-2 px-1 rounded-lg text-gray-900 text-center text-xl font-medium">
@@ -146,6 +160,35 @@ const Page = () => {
             </p>
           </Link>
         </div>
+        
+        <div className="bg-[#0a1e3b] p-3 my-2 rounded-lg">
+          <h4 className="text-[#fec544] text-center text-4xl py-4">Quotes</h4>
+          <Link href="/admin/quotes/quoteslist" target="_blank">
+            <p className="bg-[#fec544] py-2 px-1 rounded-lg text-gray-900 text-center text-xl font-medium">
+             Quotes List
+            </p>
+          </Link>
+          <Link href="/admin/quotes/addquotes" target="_blank">
+            <p className="bg-[#fec544] py-2 px-1 rounded-lg text-gray-900 text-center text-xl font-medium">
+               Add Quotes
+            </p>
+          </Link>
+        </div>
+
+        <div className="bg-[#0a1e3b] p-3 my-2 rounded-lg">
+          <h4 className="text-[#fec544] text-center text-4xl py-4">Item</h4>
+          <Link href="/admin/quotes/quoteslist" target="_blank">
+            <p className="bg-[#fec544] py-2 px-1 rounded-lg text-gray-900 text-center text-xl font-medium">
+            Item List
+            </p>
+          </Link>
+          <Link href="/admin/quotes/addquotes" target="_blank">
+            <p className="bg-[#fec544] py-2 px-1 rounded-lg text-gray-900 text-center text-xl font-medium">
+               Add Item
+            </p>
+          </Link>
+        </div>
+
       </div>
 
       {/* Menu List--------------------------- */}

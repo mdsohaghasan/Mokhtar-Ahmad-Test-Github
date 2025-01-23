@@ -1,26 +1,26 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import Lecture from "./Lecture/Lecture";
+import Live from "./Live/Live";
+import Stream from "./Live/Player";
 // const Lecture = dynamic(() => import("./Lecture/Lecture"), { ssr: false });
 
-const lecture = () => {
+const live = () => {
   return (
     <div className="py-8">
       {/* start Title */}
-      <div className="container ">
+      <div className="container">
         <div className="st-section-heading st-style1">
-          <h4 className="st-section-heading-title">lecture</h4>
-          <h2 className="st-section-heading-subtitle">lecture</h2>
+          <h4 className="st-section-heading-title">live</h4>
+          <h2 className="st-section-heading-subtitle">streaming</h2>
         </div>
         <div className="st-height-b25 st-height-lg-b25"></div>
       </div>
       {/* End Title */}
       <div className="container px-24">
-        <p className="text-center py-4">
-        Welcome to Professor Mokhter Ahmads Video Lecture Page on Islamic Spirituality. Explore profound insights into the world of Islamic spirituality through engaging video lectures. Join us on a transformative exploration of spiritual practices, teachings, and contemplative reflections rooted in the rich Islamic tradition. Discover new perspectives that inspire a deeper connection with your faith and a greater understanding of the spiritual path.
-        </p>
+        <Stream></Stream>
+        
         <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 justify-center px-10 lg:px-32 ">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 justify-center px-10 lg:px-32">
             <span className="border border-[#000] rounded-2xl py-1 px-3 text-center ">
               #Lectures
             </span>
@@ -49,7 +49,7 @@ const lecture = () => {
         </div>
       </div>
 
-      <Lecture></Lecture>
+      <Live></Live>
 
       <div className="container lg:px-32">
         <div className="py-3 px-6 bg-slate-800 flex items-center justify-between rounded-xl">
@@ -68,4 +68,6 @@ const lecture = () => {
   );
 };
 
-export default lecture;
+export default live;
+
+
