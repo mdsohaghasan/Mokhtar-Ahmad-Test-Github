@@ -33,8 +33,7 @@ const Page = () => {
     };
     console.log(liveInfo)
 
-       const url = `http://localhost:5000/live/add`;
-    // const url = `https://mokhter-ahmad-backend-portfolio.vercel.app/live/add`;
+    const url = `https://mokhter-ahmad-backend-portfolio.vercel.app/live/add`;
     fetch(url, {
         method: 'POST',
         headers: {

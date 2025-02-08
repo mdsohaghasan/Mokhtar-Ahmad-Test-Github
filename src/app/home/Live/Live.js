@@ -1,11 +1,12 @@
 "use client";
 import "./Style.css";
 import React, { useEffect} from "react";
-import dynamic from "next/dynamic";
-const Plyr = dynamic(() => import("plyr-react"), { ssr: false });
-import "plyr-react/plyr.css";
+// import dynamic from "next/dynamic";
+// const Plyr = dynamic(() => import("plyr-react"), { ssr: false });
+// import "plyr-react/plyr.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Stream from "./Player";
 
 
 
@@ -49,14 +50,10 @@ useEffect(() => {
               
             </div>
 
-            <div className="" data-aos="fade-up" data-aos-duration="800">
-            
+            <div className="" data-aos="fade-up" data-aos-duration="800">    
               <span className="border border-white rounded-3xl py-2 px-3 text-center text-sm	">
                 Live Streaming
-              </span>
-              
-              
-              
+              </span> 
             </div>
             
             <div className="py-3" data-aos="fade-up" data-aos-duration="500">
@@ -70,16 +67,8 @@ useEffect(() => {
 
             {/* seconds Collum  */}
           <div className="md:w-1/2 lg:w-1/2 m-5">
-             <div >
-                <Plyr
-                  source={{
-                    type: "video",
-                    sources: [{ src: "https://www.youtube.com/watch?v=3ymlpZAMKsg", provider: "youtube" }],
-                  }}
-                />
-            </div>
+            <Stream></Stream>
           </div>
-
 
 
         </div>
@@ -92,3 +81,5 @@ useEffect(() => {
 };
 
 export default Live;
+
+

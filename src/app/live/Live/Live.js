@@ -8,15 +8,17 @@ import "aos/dist/aos.css";
 
 
 import localFont from "next/font/local";
-const AkhandBengali = localFont({ src: "../../fonts/AkhandBengali-Extrabold.ttf" });
 const HindSiliguri = localFont({ src: "../../fonts/HindSiliguri-Light.ttf" });
+
+
+
 
 const Live = () => {
 
   const [Live, setLive] = useState([]);
 
   useEffect(() => {
-    const url = `https://mokhter-ahmad-backend-portfolio.vercel.app/lecture/all`;
+    const url = `https://mokhter-ahmad-backend-portfolio.vercel.app/live/all`;
     fetch(url, {
       // headers: {
       //   authorization: `Bearer ${token}`,
@@ -55,7 +57,7 @@ const Live = () => {
             </div>  
           </div>
            <span className="text-[#fec544] my-3"> Streamed Date :
-               {new Date(live.date).toLocaleDateString("en-GB")}
+               {new Date(live.createdOn).toLocaleDateString("en-GB")}
            </span>
         </div>
            ))}

@@ -26,8 +26,7 @@ const Page = () => {
   const [Quotes, setQuotes] = useState([]);
 
   useEffect(() => {
-    // const url = `https://mokhter-ahmad-backend-portfolio.vercel.app/quotes/all`;
-    const url = `http://localhost:5000/quotes/All`;
+    const url = `https://mokhter-ahmad-backend-portfolio.vercel.app/quotes/all`;
     fetch(url, {
       // headers: {
       //   authorization: `Bearer ${token}`,
@@ -49,8 +48,7 @@ const Page = () => {
     const proceed = window.confirm("are you sure deleteing");
     if (proceed) {
       console.log(id);
-      // const url = `https://mokhter-ahmad-backend-portfolio.vercel.app/quotes/delete/${id}`;
-      const url = `http://localhost:5000/quotes/delete/${id}`;
+      const url = `https://mokhter-ahmad-backend-portfolio.vercel.app/quotes/delete/${id}`;
       fetch(url, {
         method: "DELETE",
         // headers: {

@@ -6,17 +6,15 @@ import Image from "next/image";
 import quote from "./quote.png";
 
 
-// import localFont from "next/font/local";
-// const HindSiliguri = localFont({ src: "../../quotes/HindSiliguri-Light.ttf" });
-// const HindSiliguri = localFont({ src: "../../fonts/HindSiliguri-Light.ttf" });
-// const AkhandBengali = localFont({ src: "../../fonts/AkhandBengali-Extrabold.ttf" });
+import localFont from "next/font/local";
+const HindSiliguri = localFont({ src: "../fonts/HindSiliguri-Light.ttf" });
+const AkhandBengali = localFont({ src: "../fonts/AkhandBengali-Extrabold.ttf" });
 
 const Quotes = () => {
   const [Quotes, setQuotes] = useState([]);
 
   useEffect(() => {
-    // const url = `https://mokhter-ahmad-backend-portfolio.vercel.app/quotes/all`;
-    const url = `http://localhost:5000/quotes/All`;
+    const url = `https://mokhter-ahmad-backend-portfolio.vercel.app/quotes/all`;
     fetch(url, {
       // headers: {
       //   authorization: `Bearer ${token}`,
@@ -53,9 +51,8 @@ const Quotes = () => {
           <div className="flex gap-3 p-3 m-3 rounded-lg bg-slate-900" key={quotes.id} data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
             <div className="w-full">
             <Image src={quote} alt="quote" className="w-8"/>
-              <p className="text-xl text-slate-200">{quotes.text}</p> 
-              {/* <p className={`text-xl text-slate-200 ${HindSiliguri.className}`}>{quotes.text}</p>  */}
-              <h3 className="text-xl text-amber-400">{quotes.name}</h3>
+              <p className={`text-xl text-slate-200 ${HindSiliguri.className}`}>{quotes.text}</p> 
+              <h3 className={`text-2xl text-amber-400 ${AkhandBengali.className}`}> - {quotes.name}</h3 >
             </div>
           </div>
         ))}

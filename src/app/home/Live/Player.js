@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 
 
 import localFont from "next/font/local";
-const HindSiliguri = localFont({ src: "../../fonts/HindSiliguri-Light.ttf" });
+// const HindSiliguri = localFont({ src: "../../fonts/HindSiliguri-Light.ttf" });
 
 const Stream = () => {
 
@@ -38,10 +38,17 @@ const Stream = () => {
 
   return (
     
-      <div className="container my-3">
+      <div>
+        <div >
+                <Plyr
+                  source={{
+                    type: "video",
+                    sources: [{ src: Stream.url, provider: "youtube" }],
+                  }}
+                />
+            </div>
         
-        
-          <h4 className={`text-amber-300 ${HindSiliguri.className}`}>{Stream.title}</h4>
+          {/* <h4 className={`text-amber-300 ${HindSiliguri.className}`}>{Stream.title}</h4>
           <div className="border-2 border-white rounded-md  bg-slate-800 " data-aos="zoom-out-up" data-aos-duration="1400" data-aos-delay="800">
             <div className="hover:scale-40 transition-transform duration-300">
               <Plyr
@@ -51,7 +58,7 @@ const Stream = () => {
                 }}
               />
             </div>
-          </div>
+          </div> */}
        
         
       </div>

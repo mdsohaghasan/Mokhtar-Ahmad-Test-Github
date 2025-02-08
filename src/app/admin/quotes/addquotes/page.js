@@ -32,8 +32,7 @@ const Page = () => {
     };
     console.log(quotesInfo)
 
-    // const url = `https://mokhter-ahmad-backend-portfolio.vercel.app/quotes/add`;
-    const url = `http://localhost:5000/quotes/add`;
+    const url = `https://mokhter-ahmad-backend-portfolio.vercel.app/quotes/add`;
     fetch(url, {
         method: 'POST',
         headers: {

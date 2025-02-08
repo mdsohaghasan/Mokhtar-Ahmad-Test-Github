@@ -6,58 +6,34 @@ import quote from "./quote.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+
+// Bangla Font 
+import localFont from "next/font/local";
+const HindSiliguri = localFont({ src: "../../fonts/HindSiliguri-Light.ttf" });
+const AkhandBengali = localFont({ src: "../../fonts/AkhandBengali-Extrabold.ttf" });
+
 // slider
 import { Autoplay, EffectFade } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-// const res = [
-//    {
-//      id: 1,
-//      quote: "Quotes 1 : There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
-//      author: "-Prof. Mokhter Ahmad",
-//      img: quote,
-//    },
-//    {
-//      id: 2,
-//      quote: "Quotes 2 : It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
-//      author: "-Prof. Mokhter Ahmad",
-//      img: quote,
-//    },
-//    {
-//      id: 3,
-//      quote: "Quotes 3 :It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose",
-//      author: "-Prof. Mokhter Ahmad",
-//      img: quote,
-//    },
-
-//  ];
-
-// AOS Animation .........
-
-
 const Quote = () => {
+  const [quotes, setQuotes] = useState([]);
 
+  useEffect(() => {
+    // Fetch API data
+    const fetchQuotes = async () => {
+      try {
+        const response = await fetch("https://mokhter-ahmad-backend-portfolio.vercel.app/quotes/all");
+        const data = await response.json();
+        setQuotes(data);
+      } catch (error) {
+        console.error("Error fetching quotes:", error);
+      }
+    };
 
-// const [Quotes, setQuotes] = useState([]);
-
-//   useEffect(() => {
-//     // const url = `https://mokhter-ahmad-backend-portfolio.vercel.app/quotes/all`;
-//     const url = `http://localhost:5000/quotes/All`;
-//     fetch(url, {
-//       // headers: {
-//       //   authorization: `Bearer ${token}`,
-//       // },
-//     })
-//       .then((res) => res.json())
-//       .then((data) => setQuotes(data))
-//       .catch((error) => {
-//         console.error("Error fetching program data:", error);
-//       });
-//   }, []);
-
-//   console.log(Quotes);
-
+    fetchQuotes();
+  }, []);
 
   useEffect(() => {
     AOS.init();
@@ -74,63 +50,27 @@ const Quote = () => {
         </div>
         <div className="st-height-b25 st-height-lg-b25"></div>
       </div>
-      {/* end title */}
-
+      
+      {/* Slide Section */}
       <div className="container px-5 lg:px-0">
-        <div className="lg:flex  lg:gap-3 ">
-          <div className="lg:w-4/6 py-5" data-aos="fade-up" data-aos-duration="800">
-            {/* slide section  */}
-            <Swiper
-              //  effect={'fade'}
-              autoplay={{
-                delay: 1000,
-              }}
-              modules={[Autoplay, EffectFade]}>
-              <Image src={quote} alt="quote" className="w-40 " />
-
-              <SwiperSlide>
-                <div>
-                  <p>
-                    Quotes 1 : Here in the United States our Muslim citizens are
-                    making many contributions in business, science and law,
-                    medicine and education, and in other fields. Muslim members
-                    of our Armed Forces and of my administration are serving
-                    their fellow Americans with distinction,
-                  </p>
-                  <h4>-Prof. Mokhter Ahmad</h4>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div>
-                  <p>
-                    Quotes 2 : Here in the United States our Muslim citizens are
-                    making many contributions in business, science and law,
-                    medicine and education, and in other fields. Muslim members
-                    of our Armed Forces and of my administration are serving
-                    their fellow Americans with distinction,
-                  </p>
-                  <h4>-Prof. Mokhter Ahmad</h4>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div>
-                  <p>
-                    Quotes 3 : Here in the United States our Muslim citizens are
-                    making many contributions in business, science and law,
-                    medicine and education, and in other fields. Muslim members
-                    of our Armed Forces and of my administration are serving
-                    their fellow Americans with distinction,
-                  </p>
-                  <h4>-Prof. Mokhter Ahmad</h4>
-                </div>
-              </SwiperSlide>
+        <div className="lg:flex lg:gap-3 ">
+          <div className="lg:w-4/6 py-5" data-aos="fade-up" data-aos-duration="800">    
+            <Swiper autoplay={{ delay: 5000, }} modules={[Autoplay, EffectFade]} >      
+              {quotes.map((quoteItem) => (
+                <SwiperSlide key={quoteItem.id}>
+                  <div>
+                  <p className={`text-xl text-slate-200 ${HindSiliguri.className}`}>{quoteItem.text}</p>  
+                  <h3 className={`text-2xl text-white-400 ${AkhandBengali.className}`}> - {quoteItem.name}</h3 > 
+                  </div> 
+                </SwiperSlide>
+              ))}
             </Swiper>
 
-            {/* slide section  */}
-          </div>
+              <Image src={quote} alt="quote" className="w-40 " />
 
-          <div className="lg:w-2/6  py-4" data-aos="fade-left" data-aos-duration="800">
-            <Image src={mokhter} alt="quote"/>
+          </div>
+          <div className="lg:w-2/6 py-4" data-aos="fade-left" data-aos-duration="800">
+            <Image src={mokhter} alt="Prof. Mokhter Ahmad" />
           </div>
         </div>
       </div>
@@ -141,3 +81,5 @@ const Quote = () => {
 };
 
 export default Quote;
+
+

@@ -23,8 +23,7 @@ const Page = () => {
   const [Live, setLive] = useState([]);
 
   useEffect(() => {
-    // const url = `https://mokhter-ahmad-backend-portfolio.vercel.app/live/all`;
-    const url = `http://localhost:5000/live/all`;
+    const url = `https://mokhter-ahmad-backend-portfolio.vercel.app/live/all`;
     fetch(url, {
       // headers: {
       //   authorization: `Bearer ${token}`,
@@ -103,7 +102,7 @@ const Page = () => {
             <div className="py-2">
               <p> Title : {live.title}</p>
               {/* <p> Category : {live.category}</p> */}
-              <p> Date : {live.date}</p>
+              <p> Date : {new Date(live.createdOn).toLocaleDateString("en-GB")}</p>
             </div>
             <button className="px-3 py-2 mr-3 mb-2 bg-green-300 rounded-lg text-slate-800">
               <Link href={`/admin/live/${live._id}`} target="_blank">
