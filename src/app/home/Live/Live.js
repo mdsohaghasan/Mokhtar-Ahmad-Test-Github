@@ -63,14 +63,10 @@ useEffect(() => {
             </div>
           </div>
 
-
-
             {/* seconds Collum  */}
-          <div className="md:w-1/2 lg:w-1/2 m-5">
+          <div className="md:w-1/2 lg:w-1/2 sm:m-5">
             <Stream></Stream>
           </div>
-
-
         </div>
       </div>
         
