@@ -39,15 +39,20 @@ useEffect(() => {
 
       <div className="container px-8 ">
 
-        <div className="lg:flex lg:items-center md:flex md:items-center ">
+        <div className="lg:flex lg:items-center md:flex md:items-center md:flex-row-reverse "> 
 
-          {/* First Collum  */}
+         {/* First Collum  */}
+         <div className="md:w-1/2 lg:w-1/2 sm:m-5">
+            <Stream></Stream>
+          </div>
+
+       
+
+{/* seconds Collum  */}
           <div className="md:w-1/2 lg:w-1/2 gap-3">
-
             <div className="  lg:text-left" data-aos="fade-up" data-aos-duration="500">
               <h1 className="text-4xl py-3 text-amber-400">Our Live Session</h1>
               <span className="circle"></span>
-              
             </div>
 
             <div className="" data-aos="fade-up" data-aos-duration="800">    
@@ -63,10 +68,8 @@ useEffect(() => {
             </div>
           </div>
 
-            {/* seconds Collum  */}
-          <div className="md:w-1/2 lg:w-1/2 sm:m-5">
-            <Stream></Stream>
-          </div>
+            
+          
         </div>
       </div>
         
